@@ -5,5 +5,4 @@ pluginManagement {
         mavenCentral()
     }
 }
-
 include(":HiCartoonExt")
