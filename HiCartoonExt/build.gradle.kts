@@ -5,7 +5,6 @@ plugins {
 }
 
 cloudstream {
-    // This allows the compiled plugin to specify its repository source
     setRepo("pratikpk05", "Cloudstream-HiCartoon", "github")
 }
 
@@ -27,6 +26,6 @@ android {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("com.github.recloudstream:cloudstream:-SNAPSHOT")
+    implementation("com.github.recloudstream:cloudstream:pre-release")
     implementation("org.jsoup:jsoup:1.15.3")
 }
