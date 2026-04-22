@@ -26,7 +26,6 @@ android {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    // Switched to pre-release to bypass JitPack outages
     implementation("com.github.recloudstream:cloudstream:pre-release")
     implementation("org.jsoup:jsoup:1.15.3")
 }
