@@ -26,6 +26,6 @@ android {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("com.github.recloudstream:cloudstream:master")
+    implementation("com.github.recloudstream:cloudstream:pre-release")
     implementation("org.jsoup:jsoup:1.15.3")
 }
