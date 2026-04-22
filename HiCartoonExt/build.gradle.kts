@@ -25,10 +25,10 @@ android {
 }
 
 dependencies {
-    val apk by configurations
+    val cloudstream by configurations
     val implementation by configurations
 
-    apk("com.lagradost:cloudstream3:pre-release")
+    cloudstream("com.lagradost:cloudstream3:pre-release")
     implementation(kotlin("stdlib"))
     implementation("org.jsoup:jsoup:1.15.3")
 }
