@@ -6,7 +6,7 @@ plugins {
 
 cloudstream {
     // This allows the compiled plugin to specify its repository source
-    setRepo("https://raw.githubusercontent.com/OWNER/REPO/builds")
+    setRepo("pratikpk05", "Cloudstream-HiCartoon")
 }
 
 android {
