@@ -1,20 +1,32 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-        maven("https://jitpack.io")
+plugins {
+    id("com.android.library")
+    kotlin("android")
+    id("com.lagradost.cloudstream3.gradle")
+}
+
+cloudstream {
+    setRepo("pratikpk05", "Cloudstream-HiCartoon", "github")
+}
+
+android {
+    namespace = "com.hicartoon"
+    compileSdk = 33
+    defaultConfig {
+        minSdk = 21
+        targetSdk = 33
     }
-    dependencies {
-        classpath("com.android.tools.build:gradle:7.4.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10")
-        classpath("com.github.recloudstream:gradle:-SNAPSHOT")
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven("https://jitpack.io")
-    }
+dependencies {
+    implementation(kotlin("stdlib"))
+    // Switched to pre-release to bypass JitPack outages
+    implementation("com.github.recloudstream:cloudstream:pre-release")
+    implementation("org.jsoup:jsoup:1.15.3")
 }
